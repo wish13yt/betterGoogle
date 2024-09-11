@@ -1,5 +1,4 @@
-<script>
-    function generateSearch() {
+function generateSearch() {
 const script = document.createElement('script');
 // use local file
 // script.src = 'script.js';
@@ -10,8 +9,3 @@ script.async = true;
 // script.type = 'module';
 document.body.appendChild(script);
 }
-</script>
-<h1>betterGoogle</h1>
-<p>Powered by Google Programmable Search.</p>
-<button onclick="generateSearch()">Generate search!</button>
-<div class="gcse-search"></div>
