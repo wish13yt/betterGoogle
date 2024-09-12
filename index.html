@@ -9,9 +9,32 @@ script.async = true;
 // make code in script to be treated as JavaScript module
 // script.type = 'module';
 document.body.appendChild(script);
+const button1 = document.getElementById("generateButton");
+button1.remove();
+const button2 = document.getElementById("noSafeSearch");
+button2.remove();
+}
+</script>
+<script>
+    function disableSafeSearch() {
+  const script2 = document.createElement('script');
+// use local file
+// script.src = 'script.js';
+script2.src =
+  'https://cse.google.com/cse.js?cx=b01cce44f84a0497e';
+script2.async = true;
+// make code in script to be treated as JavaScript module
+// script.type = 'module';
+document.body.appendChild(script2);
+const button1 = document.getElementById("generateButton");
+button1.remove();
+const button2 = document.getElementById("noSafeSearch");
+button2.remove();
 }
 </script>
 <h1>betterGoogle</h1>
 <p>Powered by Google Programmable Search.</p>
-<button onclick="generateSearch()">Generate search!</button>
+<button onclick="generateSearch()" id="generateButton">SafeSearch</button>
+<button onclick="disableSafeSearch()" id="noSafeSearch">No SafeSearch</button>
 <div class="gcse-search"></div>
+<p>Want to change settings? Refresh.</p>
